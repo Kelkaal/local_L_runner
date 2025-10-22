@@ -108,6 +108,26 @@ echo "Runner successfully registered for repository: ${REPO}"
    ```bash
    chmod +x setup_github_runner.sh
 ```
+It will prompt you to enter the following:
+
+- **Repository** → e.g. `Kelkaal/Local_Runner`  
+- **GitHub Token** → your personal access token  
+
+---
+
+### The Script Will Automatically
+
+1. **Download** the GitHub runner package  
+2. **Register** it with your repository  
+3. **Install and start** it as a system service  
+
+---
+
+## Now Run a Test Pipeline Using the Self-Hosted Runner
+
+Create a workflow in your repository at:
+
+
 
 It will prompt to Enter the following:
 
