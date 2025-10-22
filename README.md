@@ -7,12 +7,13 @@ It automates the process using a Bash script, which downloads, registers, and in
 # Step-by-Step Setup Process
 
 ## Things to do first
--A GitHub repository
--Personal Access Token (classic) with the following scopes:
--repo
--workflow
--admin:repo_hook
--A Linux,Windows or Mac environment (in my case: Ubuntu on WSL)
+
+1.A GitHub repository
+2.Personal Access Token (classic) with the following scopes:
+3.repo
+4.workflow
+5.admin:repo_hook
+6.A Linux,Windows or Mac environment (in my case: Ubuntu on WSL)
 
 
 ## Script Used: `setup_github_runner.sh`
@@ -97,18 +98,19 @@ echo "=== Setup complete! ==="
 echo "Runner successfully registered for repository: ${REPO}"
 ```
 
-## Steps to Run
--Save the script above as setup_github_runner.sh
--Make it executable:
+
+# Steps to Run
+Save the script above as setup_github_runner.sh
+Make it executable:
 chmod +x setup_github_runner.sh
 
 # Run the script:
 ./setup_github_runner.sh
 
 Then
- Enter:
--Repository → e.g. github_username/Local_Runner
--GitHub Token → your personal access token
+Enter:
+Repository → e.g. github_username/Local_Runner
+GitHub Token → your personal access token
 
 
 
