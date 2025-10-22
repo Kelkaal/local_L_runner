@@ -106,6 +106,12 @@ echo "Runner successfully registered for repository: ${REPO}"
 1. Save the script above as **`setup_github_runner.sh`**
 2. Make it executable:
    ```bash
-   chmod +x setup_github_runner.sh
+   chmod +x setup_github_runner.sh ```
+   ---
+### Run the script
+
+Once everything is set up, run the script:
+```bash
+./setup_github_runner.sh
 ```
-### Run the Script
+---
