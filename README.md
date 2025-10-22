@@ -115,7 +115,7 @@ Once everything is set up, run the script:
 
 ```bash
 ./setup_github_runner.sh
-```
+---
 
 ## Running the Setup Script
 
