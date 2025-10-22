@@ -1,0 +1,11 @@
+name: Deploy App
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: Linux
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a simple script
+        run: echo "Deploying from my local PC!"
