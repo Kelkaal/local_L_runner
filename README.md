@@ -135,6 +135,10 @@ Once you push this workflow to your repository:
 - Your **local runner** (running under WSL) will automatically **pick up the job**.  
 - You’ll see the job running in **GitHub → Actions → Test Self-Hosted Runner**.
 
+  <img width="1769" height="603" alt="Screenshot 2025-10-22 003321" src="https://github.com/user-attachments/assets/31f53114-62cf-4ce5-94b0-23f3bf3e9c32" />
+
+
+
 ## Challenges Faced & How I Solved Them
 
 | **Challenge** | **Description** | **Solution** |
