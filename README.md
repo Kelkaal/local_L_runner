@@ -115,3 +115,69 @@ Once everything is set up, run the script:
 ./setup_github_runner.sh
 ```
 ---
+
+## Running the Setup Script
+
+It will prompt you to enter the following:
+
+- **Repository** → e.g. `Kelkaal/Local_Runner`  
+- **GitHub Token** → your personal access token  
+
+---
+
+### The Script Will Automatically
+
+1. **Download** the GitHub runner package  
+2. **Register** it with your repository  
+3. **Install and start** it as a system service  
+
+---
+
+## Run a Test Pipeline Using the Self-Hosted Runner
+
+Create a workflow in your repository at:
+.github/workflows/test-runner.yml
+
+---
+
+### Expected Result
+
+Once you push this workflow to your repository:
+
+- Your **local runner** (running under WSL) will automatically **pick up the job**.  
+- You’ll see the job running in **GitHub → Actions → Test Self-Hosted Runner**.
+
+---
+
+<img width="1769" height="603" alt="Screenshot 2025-10-22 003321" src="https://github.com/user-attachments/assets/31f53114-62cf-4ce5-94b0-23f3bf3e9c32" />
+
+---
+
+## Challenges Faced & How I Solved Them
+
+| **Challenge** | **Description** | **Solution** |
+|----------------|-----------------|---------------|
+| **403 Forbidden Error** | I initially got a 403 error when fetching the registration token using my script. | Realized my Personal Access Token lacked the right scopes. Recreated a classic token with **repo**, **workflow**, and **admin:repo_hook** permissions. |
+| **Incorrect Repo Format** | The repo was initially entered as a full URL (`https://github.com/Kelkaal/local_L_runner.git`) instead of the required `owner/repo` format. | Fixed it by using only `Kelkaal/local_L_runner`. |
+| **Network Issues on WSL** | The runner occasionally failed to start due to WSL network settings. | Restarted WSL and confirmed connectivity before starting the service. |
+
+---
+
+## What I’d Do Differently in Production
+
+- **Use Docker** to isolate the runner environment.  
+- **Run it on a dedicated server or EC2 instance** instead of a local WSL machine.  
+- **Add monitoring and alerting** for runner failures.  
+- **Use `systemd` or container restart policies** for automatic recovery.  
+- **Store tokens securely** using GitHub Secrets, not inline in scripts.  
+
+---
+
+
+## Security Considerations Implemented
+
+- **Token input is hidden** using `stty -echo` to prevent it from displaying in the terminal.  
+- **Script validates** that both `REPO` and `PAT` are provided before continuing.  
+- **No token is logged or echoed** back to the terminal or stored in plain text.  
+- **Runner operates as a non-root user**, except when elevated privileges are required for service setup.  
+- **Token scopes minimized** to only what’s necessary — `repo` and `workflow`.
