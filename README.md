@@ -4,7 +4,7 @@
 This project demonstrates how to set up a **self-hosted GitHub Actions runner** on a local environment (Ubuntu on WSL).  
 It automates the process using a Bash script, which downloads, registers, and installs the runner as a service.
 
-# Step-by-Step Setup Process
+## Step-by-Step Setup Process
 
 ## Things to do first
 -A GitHub repository
@@ -15,7 +15,7 @@ It automates the process using a Bash script, which downloads, registers, and in
 -A Linux,Windows or Mac environment (in my case: Ubuntu on WSL)
 
 ### Script Used: `setup_github_runner.sh
-# 🧩 Self-Hosted GitHub Actions Runner Setup
+# Self-Hosted GitHub Actions Runner Setup
 
 ## Overview
 
@@ -24,7 +24,7 @@ It automates the process using a POSIX-compliant Bash script, which downloads, r
 
 ---
 
-## 1️⃣ Setup a Self-Hosted GitHub Actions Runner on Your Local PC
+## 1️ Setup a Self-Hosted GitHub Actions Runner on Your Local PC
 
 ### Prerequisites
 - A **GitHub repository** you have access to (e.g. `Kelkaal/Local_Runner`)
@@ -37,7 +37,7 @@ It automates the process using a POSIX-compliant Bash script, which downloads, r
 
 ---
 
-### Script Used: `setup_github_runner.sh`
+### 2. Script Used: `setup_github_runner.sh`
 
 ```sh
 
@@ -117,7 +117,7 @@ sudo ./svc.sh start
 
 echo "=== Setup complete! ==="
 echo "Runner successfully registered for repository: ${REPO}"
-
+```
 
 ## Steps to Run
 -Save the script above as setup_github_runner.sh
@@ -131,3 +131,6 @@ Then
  Enter:
 -Repository → e.g. github_username/Local_Runner
 -GitHub Token → your personal access token
+
+
+
