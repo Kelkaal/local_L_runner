@@ -109,5 +109,19 @@ echo "Runner successfully registered for repository: ${REPO}"
    chmod +x setup_github_runner.sh
 
 
+It will prompt to Enter the following:
+
+- **Repository** → e.g. `Kelkaal/Local_Runner`  
+- **GitHub Token** → your personal access token  
+
+---
+
+### The script will automatically:
+
+1. **Download** the GitHub runner package  
+2. **Register** it with your repository  
+3. **Install and start** it as a system service 
+
+
 
 
