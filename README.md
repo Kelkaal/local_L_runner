@@ -173,7 +173,8 @@ Once you push this workflow to your repository:
 -  **Script validates** that both `REPO` and `PAT` are provided before continuing.  
 - **No token is logged or echoed** back to the terminal or stored in plain text.  
 -  **Runner operates as a non-root user**, except when elevated privileges are required for service setup.  
--  **Token scopes minimized** to only what’s necessary — `repo` and `workflow`.  
+-  **Token scopes minimized** to only what’s necessary — `repo` and `workflow`.
+  
 
 
 
